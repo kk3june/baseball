@@ -21,12 +21,21 @@ function swing() {
 function play(num) {
     console.log('내가 입력한 숫자' + num);
     let matchDiv = document.createElement('div');
-    let matchSpan = document.createElement('span');
+    matchDiv.setAttribute('class', 'match-line');
 
-    matchDiv.classList.add('match-line');
+    let inning = document.createElement('span');
+    inning.setAttribute('class', 'match__inning');
+    let number = document.createElement('span');
+    number.setAttribute('class', 'match__number');
+    let result = document.createElement('span');
+    result.setAttribute('class', 'match__result');
 
-    match.appendChild(matchDiv).appendChild(matchSpan).classList.add('match__inning');
+    match.appendChild(matchDiv);
+    matchDiv.appendChild(inning);
+    matchDiv.appendChild(number)
+    matchDiv.appendChild(result)
 
+    
 }
 
 input.addEventListener('keypress', (e)=> {
